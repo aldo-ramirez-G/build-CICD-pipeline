@@ -62,6 +62,7 @@ jobs:
           echo "- Deploy the artifact to the production environment"
 
   test-production:
+    needs: deploy-production
     runs-on: ubuntu-latest
     steps:
       - run: echo "- Test the artifact in the production environment"
